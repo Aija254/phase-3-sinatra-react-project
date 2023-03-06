@@ -75,13 +75,13 @@ handler. Replace this route with routes for your project.
 You can start your server with:
 
 ```console
-$ bundle exec rake server
+$ rake server
 ```
 
-This will run your server on port
-[http://localhost:9292](http://localhost:9292).
+
 
 ### Frontend Setup
+This is the link to my forntend repo("https://github.com/Aija254/Phase-3-Frontend")
 
 Your backend and your frontend should be in **two different repositories**.
 
