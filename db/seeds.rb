@@ -7,12 +7,9 @@ require 'faker'
     password: 'password'
   )
 
-  movie = User.create!(
-    title: Faker::Title.name,
-    year: Faker::Date.year,
-    director: Faker::Name.firstName,
-    genre: Faker::Name.lastName,
+  movie = Movie.create!(
+    title: Faker::Movie.title,
+    year: Faker::Date.between(from: 100.years.ago, to: Date.today).year,
+    user: user
   )
-  end
-
 end

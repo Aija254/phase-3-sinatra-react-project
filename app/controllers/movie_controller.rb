@@ -5,8 +5,14 @@ class MovieController < Sinatra::Base
     enable :sessions
     set :default_content_type, 'application/json'
 
+    # A get request method
+       get '/movies' do
+           movie = Movie.all
+           movie.to_json
+       end
 
-    post '/movies/create' do
+       
+    post '/movies/create/:user_id' do
         request.body.rewind
         data = JSON.parse(request.body.read)
       

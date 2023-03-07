@@ -24,6 +24,7 @@ class UserController < Sinatra::Base
     
       if user.save
         status 200
+        { message: 'User created successfully' }.to_json
       else
         halt 400, { error: user.errors.full_messages.join(', ') }.to_json
       end
